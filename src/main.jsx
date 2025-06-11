@@ -15,6 +15,7 @@ import EditPost from "./pages-temp/EditPost.jsx";
 import Post from "./pages-temp/Post.jsx"
 
 import AllPosts from "./pages-temp/AllPosts.jsx";
+import MyPosts from './pages-temp/MyPost.jsx'
 
 const router = createBrowserRouter([
   {
@@ -71,6 +72,15 @@ const router = createBrowserRouter([
         {
             path: "/post/:slug",
             element: <Post />,
+        },
+        {
+            path:"/my-posts",
+            element:(
+                <AuthLayout authentication>
+                    {" "}
+                    <MyPosts />
+                </AuthLayout>
+            ),
         },
     ],
 },
